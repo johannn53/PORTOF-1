@@ -66,7 +66,7 @@ module.exports = {
             var html2send = template(dataEmail);
 
             const mail = {
-              from: "nrohim893@gmail.com",
+              from: "ariJohan@gmail.com",
               to: email,
               subject: `Hello ${arrEmail[0]}, segera login ke apps`, // tambahkan nama di subject
               html: html2send, // add this line

@@ -68,6 +68,7 @@ module.exports = {
       response: update,
     });
   },
+
   getAllUser: async (req, res) => {
     const { page, limit } = req.query;
 

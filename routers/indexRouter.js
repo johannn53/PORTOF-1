@@ -1,5 +1,6 @@
 const router = require("express").Router();
 
+const resetPassWithoutButton = require("../routers/auth/forgotPasswordRouter");
 const registerRouter = require("../routers/auth/registerRouter");
 const inviteUser = require("../routers/auth/inviteUserRouter");
 const loginRouter = require("../routers/auth/loginRouter");
@@ -7,6 +8,7 @@ const userRouter = require("../routers/auth/userRouter");
 const product = require("./productRouter");
 const upload = require("./uploadRouter");
 
+router.use(resetPassWithoutButton);
 router.use(registerRouter);
 router.use(loginRouter);
 router.use(inviteUser);
