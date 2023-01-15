@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Roboto, sans-serif;
+        background: #e9e9e9;
+      }
+      table {
+        border-spacing: 0;
+      }
+      .main {
+        margin: 0 auto;
+      }
+      .content-header {
+        background: #e9e9e9;
+      }
+      .content-margin {
+        padding: 20px 50px;
+      }
+      .content {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .content-body {
+        background: white;
+        border-top: 8px solid #00b0f3;
+        border-radius: 5px 5px 0 0;
+      }
+      .content-footer {
+        padding: 20px;
+        background: black;
+        border-radius: 0 0 5px 5px;
+      }
+      h1 {
+        font-size: 27px;
+      }
+      .button-container {
+        text-align: center;
+      }
+      .button {
+        background-color: #00b0f3;
+        padding: 15px 32px;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+        color: white;
+        font-weight: 500;
+      }
+      .center {
+        text-align: center;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      .copyright {
+        background: #e9e9e9;
+        font-size: 11px;
+        color: grey;
+        line-height: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table role="presentation" class="main">
+      <tr>
+        <td>
+          <table role="presentation" class="content">
+            <tr>
+              <td class="content-header content-margin">
+                <img src="cid:maio_horizontal_transparent.png" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td class="content-body content-margin">
+                <table role="presentation">
+                  <h1>You have been invited to MAIO!</h1>
+                  <p>Hi {{ first_name }} {{ last_name }},</p>
+                  <p>
+                    Please click the button below to set up a password for your
+                    new account and start making use of MAIO!
+                  </p>
+                  <p class="button-container">
+                    <a href="{{ oauth2_activation_link }}" class="button"
+                      >SET UP YOUR PASSWORD
+                    </a>
+                  </p>
+                  <p>Looking forward to seeing you,<br />MAIO</p>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="content-footer">
+                <table role="presentation">
+                  <tr>
+                    <td>
+                      <a href="https://www.maio.io">
+                        <img src="cid:maio-horizontal-logo-light.png" alt="" />
+                      </a>
+                    </td>
+                    <td>
+                      <table role="presentation">
+                        <tr>
+                          <td>
+                            <a
+                              href="https://www.linkedin.com/company/smartiatech/"
+                            >
+                              <img src="cid:linkedin.png" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a
+                              href="https://www.youtube.com/channel/UChodYLL3O_yEtknY6SQUoBQ"
+                            >
+                              <img src="cid:youtube.png" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="https://www.twitter.com/smartia_tech">
+                              <img src="cid:twitter.png" alt="" />
+                            </a>
+                          </td>
+                          <td>
+                            <a href="https://www.smartia.tech">
+                              <img src="cid:smartia_retina.png" alt="" />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="copyright">
+                <table role="presentation">
+                  <tr>
+                    <td>
+                      <p>&copy; MAIO from Smartia<br /></p>
+                      <p>
+                        You receive this email because you are invited by MAIO
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
