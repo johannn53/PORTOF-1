@@ -75,4 +75,7 @@ module.exports = {
       // refresh_token: refreshToken,
     });
   },
+  loginPage: async (req, res) => {
+    res.render("auth/login");
+  },
 };

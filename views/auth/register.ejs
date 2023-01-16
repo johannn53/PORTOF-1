@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <link rel="icon" href="/image/LOGO_BINAR.jpeg" type="image/icon" />
+    <link href="css/register.css" rel="stylesheet" type="text/css" />
+    <body>
+      <div class="form">
+        <div class="formRegister">
+          <img src="/image/authImage.png" height="250px" width="auto" />
+          <h1 class="textRegister" style="font-size: 20px">Create Account</h1>
+          <form
+            action="/bingle/api/v1/user/register"
+            method="post"
+            onsubmit="validateForm(event)"
+          >
+            <div>
+              <label>Username</label>
+              <br />
+              <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                size="35px"
+                style="border-radius: 10px"
+              />
+            </div>
+            <br />
+            <div>
+              <label>eMail</label>
+              <br />
+              <input
+                type="email"
+                name="email"
+                placeholder="Mail@xxx.xxx"
+                size="35px"
+                style="border-radius: 10px"
+              />
+            </div>
+            <br />
+            <div>
+              <label>Password</label>
+              <br />
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Password"
+                style="border-radius: 10px"
+                size="35px"
+                onkeyup="passConfirm();"
+              />
+            </div>
+            <br />
+            <div>
+              <label>Re-enter your Password</label>
+              <br />
+              <input
+                id="ConfirmPassword"
+                type="password"
+                name="rePassword"
+                placeholder="Re-enter your password here"
+                size="35px"
+                style="border-radius: 10px"
+                onkeyup="passConfirm();"
+              />
+            </div>
+            <br />
+            <span id="Message"></span>
+            <input type="submit" id="submit" value="Register" />
+          </form>
+          <p>
+            Already have an account? <br />
+            <a class="redirectLogin" href="/login">Login Here</a>
+          </p>
+        </div>
+      </div>
+    </body>
+  </head>
+</html>

@@ -1,0 +1,32 @@
+html {
+  background: #79187d;
+  font-family: Verdana, sans-serif;
+}
+
+.textRegister {
+  text-shadow: 0px 3px 10px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15),
+    0px 12px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: block;
+  width: 25rem;
+  margin: 6rem auto;
+  color: white;
+}
+
+.formRegister {
+  text-align: center;
+  padding-top: 15px;
+
+  /* BORDER */
+  border-color: 79187d;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 30px 10px rgb(115, 115, 223);
+}
+
+.redirectLogin {
+  color: white;
+}

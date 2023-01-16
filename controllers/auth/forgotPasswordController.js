@@ -47,7 +47,7 @@ module.exports = {
 
     if (update) {
       fs.readFile(
-        "./emails/inviteWithoutButton.html",
+        "./emails/resetPassword.html",
         { encoding: "utf-8" },
         function (err, html) {
           const transporter = nodemailer.createTransport({

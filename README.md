@@ -14,8 +14,11 @@ The component in this project is:
 4. Sequelize (postgreSQL)
 5. MCR design pattern
 6. RESTful API
-7. Auth with jwt token
+7. Auth with jwt token, encrypted password with bcrypt
 8. Upload image, jpg, pdf with multer - cloudinary
 9. Verification using email when user register an account
-10. Unit test using jest
+10. Unit test using jest (for some method)
 11. Documentation API using swagger (soon, for now using postman)
+12. HTML / EJS
+13. CSS
+14. Forgot password using nodemailer, new password will be made using random string

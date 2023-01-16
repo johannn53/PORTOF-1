@@ -99,4 +99,8 @@ module.exports = {
       message: "success register",
     });
   },
+
+  registerPage: async (req, res) => {
+    res.render("auth/register");
+  },
 };
