@@ -76,6 +76,6 @@ module.exports = {
     });
   },
   loginPage: async (req, res) => {
-    res.render("auth/login");
+    res.render("login");
   },
 };

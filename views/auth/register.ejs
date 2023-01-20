@@ -7,18 +7,14 @@
         <div class="formRegister">
           <img src="/image/authImage.png" height="250px" width="auto" />
           <h1 class="textRegister" style="font-size: 20px">Create Account</h1>
-          <form
-            action="/bingle/api/v1/user/register"
-            method="post"
-            onsubmit="validateForm(event)"
-          >
+          <form action="/register" method="post" onsubmit="validateForm(event)">
             <div>
               <label>Username</label>
               <br />
               <input
                 type="text"
-                name="username"
-                placeholder="Username"
+                name="name"
+                placeholder="name"
                 size="35px"
                 style="border-radius: 10px"
               />

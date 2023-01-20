@@ -85,6 +85,7 @@ module.exports = {
       email: email,
       password: encryptedPassword,
       roles: "user",
+      verified: false,
     };
 
     const saveRegist = await user.create(dataRegist);
@@ -101,6 +102,6 @@ module.exports = {
   },
 
   registerPage: async (req, res) => {
-    res.render("auth/register");
+    res.render("register");
   },
 };
