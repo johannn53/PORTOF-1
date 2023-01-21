@@ -70,9 +70,9 @@ module.exports = {
     res.status(200).json({
       status: 200,
       message: "success login",
-      // id: checkUser.id,
-      // access_token: accessToken,
-      // refresh_token: refreshToken,
+      id: checkUser.id,
+      access_token: accessToken,
+      refresh_token: refreshToken,
     });
   },
   loginPage: async (req, res) => {

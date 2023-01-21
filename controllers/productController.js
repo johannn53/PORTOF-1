@@ -3,6 +3,7 @@ const sequelize = require("sequelize");
 const { Op } = require("sequelize");
 
 module.exports = {
+  //GET ALL PRODUCT
   getProduct: async (req, res) => {
     const { page, limit } = req.query;
 
@@ -55,6 +56,8 @@ module.exports = {
       totalPage: Math.ceil(totalProduct / limit),
     });
   },
+
+  //GET PRODUCT BY ID
   getById: async (req, res) => {
     const { id } = req.params;
     const data = await product.findOne({
@@ -74,6 +77,8 @@ module.exports = {
       response: data,
     });
   },
+
+  //GET PRODUCT BY NAME
   getByName: async (req, res) => {
     const { search = "" } = req.query;
     const data = await product.findAll({
@@ -96,6 +101,8 @@ module.exports = {
       response: data,
     });
   },
+
+  //ADD PRODUCT
   addProduct: async (req, res) => {
     const { product_name = "", qty = "", price = "", image = "" } = req.body;
     if (product_name == "" || qty == "" || price == "" || image == "") {
@@ -145,6 +152,8 @@ module.exports = {
       response: saveProduct,
     });
   },
+
+  //EDIT / UPDATE PRODUCT
   updateProduct: async (req, res) => {
     const { product_name = "", qty = "", price = "", image = "" } = req.body;
     if (product_name == "" || qty == "" || price == "" || image == "") {
@@ -180,23 +189,23 @@ module.exports = {
         message: `no product with id ${id} found`,
       });
     }
-    const dataEdit = await product.update(
-      {
-        product_name: product_name,
-        qty: qty,
-        price: price,
-        image: image,
+
+    const dataEdit = {
+      product_name: product_name,
+      qty: qty,
+      price: price,
+      image: image,
+    };
+    const update = await product.update(dataEdit, {
+      where: {
+        id: id,
       },
-      {
-        where: {
-          id: id,
-        },
-      }
-    );
-    if (dataEdit == null) {
+    });
+
+    if (!update) {
       return res.status(500).json({
         status: 500,
-        message: "failed updating product",
+        message: "failed updating",
       });
     }
 
@@ -204,6 +213,40 @@ module.exports = {
       status: 200,
       message: "success update product",
       response: dataEdit,
+    });
+  },
+
+  //DELETE PRODUCT BY ID
+  deleteById: async (req, res) => {
+    const { id } = req.params;
+
+    const data = await product.findOne({
+      where: {
+        id: id,
+      },
+    });
+    if (!data) {
+      return res.status(404).json({
+        status: 404,
+        message: `no product found with id ${id}`,
+      });
+    }
+
+    const delProd = await product.destroy({
+      where: {
+        id: id,
+      },
+    });
+    if (!delProd) {
+      return res.status(500).json({
+        status: 500,
+        message: "error deleting product",
+      });
+    }
+
+    res.status(200).json({
+      status: 200,
+      message: `success delete product with id ${id}`,
     });
   },
 };

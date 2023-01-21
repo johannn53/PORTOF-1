@@ -24,7 +24,7 @@ Feature:
 2. Invite user with role "admin" with and without external link to verify via nodemailer.
 3. Send mail verification to verify user using link with token.
 4. Forgot password using nodemailer, new password will be made using random string.
-5. Add product (DB column: product_name, user_id, qty, price, image(link))
+5. CRUD for product (DB column: product_name, user_id, qty, price, image(link))
 6. Auth with jwt token, encrypted password with bcrypt.
 7. Upload image, video, pdf with multer - cloudinary.
 8. Unit test using jest (for some method).
