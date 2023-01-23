@@ -123,6 +123,7 @@
 const cloudinary = require("../config/cloudinaryConfig");
 
 module.exports = {
+  //SINGLE UPLOAD
   uploadImagePdf: async (req, res) => {
     try {
       const upload = await cloudinary.v2.uploader.upload(req.file.path, {

@@ -2,73 +2,6 @@ const { user } = require("../../models");
 const bcrypt = require("bcrypt");
 
 module.exports = {
-  updateUser: async (req, res) => {
-    const { id } = req.params;
-    const { name = "", email = "" } = req.body;
-    if (name == "" || email == "") {
-      if (name == "") {
-        return res.status(400).json({
-          status: 400,
-          message: "fill name",
-        });
-      }
-      if (email == "") {
-        return res.status(400).json({
-          status: 400,
-          message: "fill email",
-        });
-      }
-    }
-
-    //CHECK USER EXIST
-    const checkUser = await user.findOne({
-      where: {
-        id: id,
-      },
-    });
-    if (!checkUser) {
-      return res.status(404).json({
-        status: 404,
-        message: `user with id ${id} not found`,
-      });
-    }
-
-    //CHECK EMAIL EXIST
-    const checkEmail = await user.findOne({
-      where: {
-        email: email,
-      },
-    });
-    if (checkEmail != null) {
-      return res.status(400).json({
-        status: 400,
-        message: "email already exist",
-      });
-    }
-
-    //UPDATE
-    const update = {
-      name: name,
-      email: email,
-    };
-    const saveUpdate = await user.update(update, {
-      where: {
-        id: id,
-      },
-    });
-    if (!saveUpdate) {
-      res.status(500).json({
-        status: 500,
-        message: "failed update",
-      });
-    }
-    res.status(200).json({
-      status: 200,
-      message: "success updating",
-      response: update,
-    });
-  },
-
   getAllUser: async (req, res) => {
     const { page, limit } = req.query;
 
@@ -172,6 +105,98 @@ module.exports = {
     });
   },
 
+  //UPDATE BY ID
+  updateUser: async (req, res) => {
+    const { id } = req.params;
+    const { name = "", email = "", password = "", rePassword = "" } = req.body;
+    if (name == "" || email == "" || password == "" || rePassword == "") {
+      if (name == "") {
+        return res.status(400).json({
+          status: 400,
+          message: "fill name",
+        });
+      }
+      if (email == "") {
+        return res.status(400).json({
+          status: 400,
+          message: "fill email",
+        });
+      }
+      if (password == "") {
+        return res.status(400).json({
+          status: 400,
+          message: "fill password",
+        });
+      }
+      if (rePassword == "") {
+        return res.status(400).json({
+          status: 400,
+          message: "fill re-entered password",
+        });
+      }
+    }
+
+    //CHECK USER EXIST
+    const checkUser = await user.findOne({
+      where: {
+        id: id,
+      },
+    });
+    if (!checkUser) {
+      return res.status(404).json({
+        status: 404,
+        message: `user with id ${id} not found`,
+      });
+    }
+
+    //CHECK EMAIL EXIST
+    const checkEmail = await user.findOne({
+      where: {
+        email: email,
+      },
+    });
+    if (checkEmail.length > 1) {
+      return res.status(400).json({
+        status: 400,
+        message: "doubled email",
+      });
+    }
+
+    if (password != rePassword) {
+      return res.status(400).json({
+        status: 400,
+        message: "password does not match",
+      });
+    }
+
+    //ENCRYPT PASSWORD
+    const encryptedPassword = bcrypt.hashSync(password, 12);
+
+    //UPDATE
+    const update = {
+      name: name,
+      email: email,
+      password: encryptedPassword,
+    };
+    const saveUpdate = await user.update(update, {
+      where: {
+        id: id,
+      },
+    });
+    if (!saveUpdate) {
+      res.status(500).json({
+        status: 500,
+        message: "failed update",
+      });
+    }
+    res.status(200).json({
+      status: 200,
+      message: "success updating",
+      response: null,
+    });
+  },
+
+  //DELETE BY ID
   deleteUser: async (req, res) => {
     const { id } = req.params;
     const delUser = await user.destroy({

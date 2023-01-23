@@ -20,18 +20,21 @@ RESTful API
 
 Feature:
 
-1. User login and register with landing page. (DB column : name, email, verified, password)
-2. Invite user with role "admin" with and without external link to verify via nodemailer.
-3. Send mail verification to verify user using link with token.
-4. Forgot password using nodemailer, new password will be made using random string.
-5. CRUD for product (DB column: product_name, user_id, qty, price, image(link))
-6. Auth with jwt token, encrypted password with bcrypt.
-7. Upload image, video, pdf with multer - cloudinary.
-8. Unit test using jest (for some method).
-9. Documentation API using swagger (soon, for now using postman).
+1. User login and register with landing page. ✅
+2. User controller (Read, Update, Delete) (DB column : name, email, verified, password). ✅
+3. PAGINATION for GET method. ✅
+4. Encrypted password with bcrypt. encrypted password with bcrypt. ✅
+5. Invite user with role "admin" with (automatically verified) and without external link to verify via nodemailer. (only admin can invite admin).
+6. Send mail verification to verify user using link with token.
+7. Forgot password using nodemailer, new password will be made using random string.
+8. CRUD for product (DB column: product_name, user_id, qty, price, image(link)) ✅
+9. Auth with jwt token. ✅
+10. Upload image(PNG, JPEG), video(MP4), PDF with multer - cloudinary. ✅
+11. Unit test using jest (for some features). ✅ (remove the unstatic response first)
 
 will be added soon:
 
 1. Register and login using google oauth.
 2. Swagger documentation.
 3. User register will automatically receive email when register to verify email.
+4. Landing page for add and update product.

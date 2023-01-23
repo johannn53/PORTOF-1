@@ -6,7 +6,15 @@ const nodemailer = require("nodemailer");
 const handlebars = require("handlebars");
 
 module.exports = {
-  inviteUserWithoutButton: async (req, res) => {
+  inviteAdminWithoutButton: async (req, res) => {
+    //CHECK USER IS ADMIN
+    if (req.user.roles != "admin") {
+      return res.status(403).json({
+        status: 403,
+        message: "admin access only!",
+      });
+    }
+
     const { list_user = [] } = req.body;
     if (list_user.length < 1) {
       return res.status(400).json({
@@ -84,6 +92,7 @@ module.exports = {
         );
       }
     }
+
     return res.status(200).json({ status: 200, message: "Successfull invite" });
   },
 };
