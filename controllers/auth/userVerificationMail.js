@@ -22,7 +22,6 @@ module.exports = {
           email: email,
         },
       });
-
       if (userData) {
         return res.status(400).json({
           status: 400,

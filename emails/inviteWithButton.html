@@ -77,18 +77,17 @@
             <tr>
               <td class="content-body content-margin">
                 <table role="presentation">
-                  <h1>You have been invited to MAIO!</h1>
-                  <p>Hi {{ first_name }} {{ last_name }},</p>
+                  <h1>You have been invited to Screaming Inside(r)!</h1>
+                  <p>Hi {{ name }}</p>
+                  <p>Your password is <strong>{{ password }}</strong></p>
                   <p>
-                    Please click the button below to set up a password for your
-                    new account and start making use of MAIO!
+                    Please click the button below to verify your account and
+                    start making use of this app!
                   </p>
                   <p class="button-container">
-                    <a href="{{ oauth2_activation_link }}" class="button"
-                      >SET UP YOUR PASSWORD
-                    </a>
+                    <a href="{{ url }}" class="button">CLICK HERE TO VERIFY </a>
                   </p>
-                  <p>Looking forward to seeing you,<br />MAIO</p>
+                  <p>Looking forward to seeing you,<br />Scream Inside(r)</p>
                 </table>
               </td>
             </tr>
@@ -105,21 +104,17 @@
                       <table role="presentation">
                         <tr>
                           <td>
-                            <a
-                              href="https://www.linkedin.com/company/smartiatech/"
-                            >
+                            <a href="https://www.linkedin.com/">
                               <img src="cid:linkedin.png" alt="" />
                             </a>
                           </td>
                           <td>
-                            <a
-                              href="https://www.youtube.com/channel/UChodYLL3O_yEtknY6SQUoBQ"
-                            >
+                            <a href="https://www.youtube.com/">
                               <img src="cid:youtube.png" alt="" />
                             </a>
                           </td>
                           <td>
-                            <a href="https://www.twitter.com/smartia_tech">
+                            <a href="https://www.twitter.com/">
                               <img src="cid:twitter.png" alt="" />
                             </a>
                           </td>
