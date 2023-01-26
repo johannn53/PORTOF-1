@@ -21,21 +21,21 @@ RESTful API
 Feature:
 
 1. User login and register with landing page. ✅
-2. User controller (Read, Update, Delete) (DB column : name, email, verified, password). ✅
-3. PAGINATION for GET product method. ✅
-4. Encrypted password with bcrypt. encrypted password with bcrypt. ✅
-5. Password require to have minimum 5 characters, 1 uppercase, 1 lowercase, special character and number. ✅
-6. Invite user with role "admin" without (automatically verified) and with external link to verify via nodemailer. (only admin can invite admin). ✅
-7. Send mail verification to verify user using link with token.
-8. Forgot password using nodemailer, new password will be made using random string. ✅
-9. CRUD for product (DB column: product_name, user_id, qty, price, image(link)). ✅
-10. Auth with jwt token. ✅
-11. Upload image(PNG, JPEG), video(MP4), PDF with multer - cloudinary. ✅
-12. Unit test using jest (for some features). ✅ (remove the unstatic response first)
+2. automatically send email to new registered account to verify account with token link. ✅
+3. User controller (Read, Update, Delete) (DB column : name, email, verified, password). ✅
+4. PAGINATION for GET product method. ✅
+5. Encrypted password with bcrypt. encrypted password with bcrypt. ✅
+6. Password require to have minimum 5 characters, 1 uppercase, 1 lowercase, special character and number. ✅
+7. Invite user with role "admin" without (automatically verified) and with external link to verify via nodemailer. (only admin can invite admin). ✅
+8. Send mail verification to verify user using link with token.
+9. Forgot password using nodemailer, new password will be made using random string. ✅
+10. CRUD for product (DB column: product_name, user_id, qty, price, image(link)). ✅
+11. Auth with jwt token. ✅
+12. Upload image(PNG, JPEG), video(MP4), PDF with multer - cloudinary. ✅
+13. Unit test using jest (for some features). ✅ (remove the unstatic response first)
 
 will be added soon:
 
 1. Register and login using google oauth.
 2. Swagger documentation.
-3. User register will automatically receive email when register to verify email.
-4. Landing page for add and update product.
+3. Landing page for add and update product.

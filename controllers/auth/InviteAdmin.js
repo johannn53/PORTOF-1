@@ -222,7 +222,6 @@ module.exports = {
 
     res.render("verifiedPage");
   },
-
   confirmPage: async (req, res) => {
     res.render("verifiedPage");
   },
