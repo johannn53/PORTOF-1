@@ -25,10 +25,10 @@ Feature:
 3. PAGINATION for GET product method. ✅
 4. Encrypted password with bcrypt. encrypted password with bcrypt. ✅
 5. Password require to have minimum 5 characters, 1 uppercase, 1 lowercase, special character and number. ✅
-6. Invite user with role "admin" without (automatically verified) and with external link to verify via nodemailer. (only admin can invite admin).
+6. Invite user with role "admin" without (automatically verified) and with external link to verify via nodemailer. (only admin can invite admin). ✅
 7. Send mail verification to verify user using link with token.
-8. Forgot password using nodemailer, new password will be made using random string.
-9. CRUD for product (DB column: product_name, user_id, qty, price, image(link)) ✅
+8. Forgot password using nodemailer, new password will be made using random string. ✅
+9. CRUD for product (DB column: product_name, user_id, qty, price, image(link)). ✅
 10. Auth with jwt token. ✅
 11. Upload image(PNG, JPEG), video(MP4), PDF with multer - cloudinary. ✅
 12. Unit test using jest (for some features). ✅ (remove the unstatic response first)
