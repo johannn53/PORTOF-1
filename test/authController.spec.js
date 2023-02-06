@@ -23,8 +23,8 @@ describe("loginController login function", () => {
   it(`res.json called with{status:200, message: "success login"}, data:{name:name, password:password}}`, async () => {
     const req = mockRequest(
       {
-        name: "ari",
-        password: "12345",
+        name: "arila",
+        password: "Us3r!",
       },
       {},
       {}
