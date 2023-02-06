@@ -4,13 +4,13 @@
 
 Hi! I'm Johand and i was an ex marketing with almost 5 years experience. But i have 0 knowledge of any IT industry. So i quit my comfort zone to challenge myself learn to code. Recently i just graduated from a bootcamp with excellent point.
 
-Here is my personal portofolio project. It's far from perfect but i'm proud of it. hopefully some of this can impress you and offer me a job. I also put my CV in directory ./uploads
+Here is my personal portofolio project. It's far from perfect but i'm proud of it. hopefully some of this can impress you and offer me a job. You can visit my linkedIn for full profile [LinkedIn](https://www.linkedin.com/in/arijohand/). Or WhatsApp me on 081389934031.
 
 I'm familiar with CI/CD, AWS, and heroku(not expert, i have to learn again), but i choose not to use it in this project because last time i got a bills with total charges USD $50++ in less than a month while i have no income. But once i got a job i will sure use it so i can keep practicing to make this project awesome!!
 
-If you're
+#
 
-The component in this project is:
+## The component in this project is:
 
 Language: Javascript
 Runtime: NodeJS
