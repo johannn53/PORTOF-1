@@ -17,7 +17,7 @@ Runtime: NodeJS
 Framework: ExpressJS
 Database: Postgresql
 ORM: Sequelize
-Design pattern: Model Controller Router
+Design pattern: Some MVC some MRC
 HTML / EJS
 CSS
 RESTful API
@@ -39,7 +39,6 @@ RESTful API
 10. CRUD for product (DB column: product_name, user_id, qty, price, image(link)). ✅
 11. Auth with jwt token. ✅
 12. Upload image(PNG, JPEG), video(MP4), PDF with multer - cloudinary. ✅
-13. Unit test using jest (for some features). ✅ (remove the unstatic response first)
 ```
 
 will be added soon:
@@ -48,5 +47,133 @@ will be added soon:
 1. Register and login using google oauth.
 2. Swagger documentation.
 3. Landing page for add and update product.
-4. I'll think another feature if i found one. or maybe thats all and im moving forward to learn golang / python.
+4. Unit test using jest (for some features). (temporary disabled and will update later. did so many changes to controller and havent updated the testing unit)
+5. I'll think another feature if i found one. or maybe thats all and im moving forward to learn golang / python.
+```
+
+# URL
+
+## LOGIN
+
+```
+localhost:8899/api/v0/login
+```
+
+BODY:
+
+```
+{
+    "name": "arila",
+    "password": "Us3r!"
+}
+```
+
+### LOGIN PAGE
+
+```
+http://localhost:8899/login-page
+```
+
+#
+
+## REGISTER
+
+```
+localhost:8899/api/v0/user/register
+```
+
+BODY:
+
+```
+{
+    "name": "input name",
+    "email": "xxx@xxx.com",
+    "password": "Us3r!",
+    "rePassword": "Us3r!"
+}
+```
+
+### REGISTER PAGE
+
+```
+http://localhost:8899/register-page
+```
+
+`NB: INPUT VALID MAIL TO CHECK CONFIRM MAIL DELIVERED/NOT TO THE NEWLY REGISTERED MAIL.`
+
+#
+
+## FORGOT PASSWORD
+
+```
+localhost:8899/api/v0/resetPassword
+```
+
+BODY:
+{
+"email_user": "xxx@xxx.com"
+}
+
+#
+
+## INVITE ADMIN
+
+### WITHOUT VERIFICATION BUTTON:
+
+```
+localhost:8899/api/v0/user/invite/admin
+```
+
+### WITH VERIFICATION BUTTON:
+
+```
+localhost:8899/api/v0/user/invite/adminWithButton
+```
+
+BODY:
+
+```
+{
+    "list_user": [
+        "xxx@xxx.com"
+    ]
+}
+```
+
+#
+
+## USER CONTROLLER
+
+### GET ALL USER
+
+```
+localhost:8899/api/v0/user/getAll
+```
+
+#### PARAMS:
+
+limit: 2 `depends on how many data you want to see per page`
+
+page: 1 `view page`
+
+### GET USER BY ID
+
+```
+localhost:8899/api/v0/user/getById/:id
+```
+
+`ex: localhost:8899/api/v0/user/getById/12`
+
+### GET BY NAME
+
+```
+localhost:8899/api/v0/user/name/:name
+```
+
+`ex: localhost:8899/api/v0/user/name/xxx`
+
+### DELETE BY ID
+
+```
+localhost:8899/api/v0/user/delete/:id
 ```

@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 8899;
 require("dotenv").config();
-``;
+
 const path = require("path");
 
 const indexRouter = require("./routers/indexRouter");
