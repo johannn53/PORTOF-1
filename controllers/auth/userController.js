@@ -159,7 +159,7 @@ module.exports = {
         email: email,
       },
     });
-    if (checkEmail.length > 1) {
+    if (checkEmail && checkEmail.id !== Number(id)) {
       return res.status(400).json({
         status: 400,
         message: "doubled email",
@@ -182,6 +182,7 @@ module.exports = {
       email: email,
       password: encryptedPassword,
     };
+
     const saveUpdate = await user.update(update, {
       where: {
         id: id,
@@ -196,7 +197,6 @@ module.exports = {
     res.status(200).json({
       status: 200,
       message: "success updating",
-      response: null,
     });
   },
 

@@ -51,6 +51,32 @@ will be added soon:
 5. I'll think another feature if i found one. or maybe thats all and im moving forward to learn golang / python.
 ```
 
+# HOW TO USE
+
+1. run to install all dependencies
+
+```
+npm i
+```
+
+2. Create DB environment
+
+```
+npx sequelize db:create
+```
+
+3. Migrate the DB
+
+```
+npx sequelize db:migrate
+```
+
+4. Run nodemon
+
+```
+npm run dev
+```
+
 # URL
 
 ## LOGIN
@@ -86,8 +112,8 @@ BODY:
 
 ```
 {
-    "name": "input name",
-    "email": "xxx@xxx.com",
+    "name": "Hire Me",
+    "email": "Hire@Me.com",
     "password": "Us3r!",
     "rePassword": "Us3r!"
 }
@@ -170,7 +196,24 @@ localhost:8899/api/v0/user/getById/:id
 localhost:8899/api/v0/user/name/:name
 ```
 
-`ex: localhost:8899/api/v0/user/name/xxx`
+`ex: localhost:8899/api/v0/user/name/johan`
+
+### UPDATE USER
+
+```
+localhost:8899/api/v0/user/update/:id
+```
+
+BODY:
+
+```
+{
+    "name": "Hire Me",
+    "email": "Hire@Me.com",
+    "password": "Us3r!",
+    "rePassword": "Us3r!"
+}
+```
 
 ### DELETE BY ID
 
