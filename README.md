@@ -180,7 +180,7 @@ localhost:8899/api/v0/user/getAll
 
 limit: 2 `depends on how many data you want to see per page`
 
-page: 1 `view page`
+page: 1 `page number`
 
 ### GET USER BY ID
 
@@ -220,3 +220,79 @@ BODY:
 ```
 localhost:8899/api/v0/user/delete/:id
 ```
+
+#
+
+## PRODUCT CONTROLLER
+
+### GET ALL PRODUCT
+
+```
+localhost:8899/api/v0/allProduct
+```
+
+#### PARAMS:
+
+limit: 2 `depends on how many data you want to see per page`
+
+page: 1 `page number`
+
+### GET BY ID
+
+```
+localhost:8899/api/v0/product/:id
+```
+
+### GET BY NAME
+
+```
+localhost:8899/api/v0/products
+```
+
+#### PARAMS:
+
+search: {product name}
+
+`ex: book / phone`
+
+### UPDATE BY ID
+
+```
+localhost:8899/api/v0/product/:id
+```
+
+#### BODY:
+
+```
+{
+    "product_name": "Ari Johand",
+    "qty": 1,
+    "price": 7000000,
+    "image": "linkedin.com/in/arijohand/"
+}
+```
+
+### ADD PRODUCTS
+
+```
+localhost:8899/api/v0/product
+```
+
+#### BODY
+
+```
+{
+    "product_name": "Ari Johand",
+    "qty": 1,
+    "price": 7000000,
+    "image": "linkedin.com/in/arijohand/"
+}
+```
+
+### DELETE BY ID
+
+```
+localhost:8899/api/v0/product/:id
+```
+
+#
