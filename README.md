@@ -100,6 +100,14 @@ BODY:
 http://localhost:8899/login-page
 ```
 
+### LOGIN WITH GOOGLE OAUTH
+
+```
+http://localhost:8899/api/v0/login-oauth
+```
+
+`If success you'll redirect to google.com, if failed you'll redirect to discord.com`
+
 #
 
 ## REGISTER
