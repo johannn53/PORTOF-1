@@ -10,6 +10,8 @@ I'm familiar with CI/CD, AWS, and heroku(not expert, i have to learn again), but
 
 #
 
+## Currently im planning to make a new portofolio with more simple and clean code. The porto you're looking now is the old one. i want to make a new one because now i have 3 months experience as back end developer and i want to make a portofolio combined from what i learn in bootcamp and my last work experience.
+
 ## The component in this project is:
 
 Language: Javascript
